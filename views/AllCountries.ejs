@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="blue">
+        <a   class="a" href="/">Home</a>
+        <a   class="a" href="/allcountries">All country</a>
+        <a   class="a" href="/myRecords"> My records</a>
+
+    </div>
+
+    <%dataArr.forEach(value =>{%>
+<p> country name :<%=value.country%></p>
+<p> totalConfirmed : <%=value.totalConfirmed%></p>
+<p> totalDeaths : <%=value.totalDeaths%></p>
+<p> totalRecovered:  <%=value.totalRecovered%></p>
+<p> date : <%=value.date%></p>
+<form action="/myRecords" method="POST">
+    <button type="submit"> add-to-my-records </button>
+    <input type="text" name="country" value="<%=value.country%>" hidden>
+    <input type="text" name="totalConfirmed" value="<%=value.totalConfirmed%>" hidden>
+    <input type="text" name="totalDeaths" value="<%=value.totalDeaths%>" hidden>
+    <input type="text" name="totalRecovered" value="<%=value.totalRecovered%>" hidden>
+    <input type="text" name="date" value="<%=value.date%>" hidden>
+
+</form>
+
+<%})%>
+</body>
+</html>

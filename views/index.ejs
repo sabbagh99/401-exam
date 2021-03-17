@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+<header>
+    <div class="blue">
+        <a   class="a" href="/">Home</a>
+        <a   class="a" href="/allcountries">All country</a>
+        <a   class="a" href="/myRecords"> My records</a>
+
+    </div>
+</header>
+<section class="grid">
+
+
+    <p class="p"> Total Confirmed:
+        <%=data.TotalConfirmed%>
+    </p>
+    <p class="p">
+        Total Deaths : <%=data.TotalDeaths%>
+
+    </p>
+
+    <p class="p"> Total Recovered : <%=data.TotalRecovered%> </p>
+
+</section>
+<h2>Get statitcs for a spicifc country</h2>
+    <form action="/getCountryResult" method="POST">
+    
+    <input type="text" name="city"  placeholder=" write your city name ">
+
+    <input type="date" name="from"  placeholder="from date">
+    <input type="date" name="to"  placeholder=" until date">
+
+    <button type="submit"> search</button>
+
+    </form>
+</body>
+
+</html>

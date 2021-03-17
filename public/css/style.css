@@ -1,0 +1,18 @@
+* {
+    margin: 0%;
+}
+.blue{
+    background-color: black;
+}
+.a{
+    padding: 10px;
+    color: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.p{
+    background-color: tomato;
+}
