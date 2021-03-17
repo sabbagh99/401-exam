@@ -16,13 +16,15 @@
         <a   class="a" href="/myRecords"> My records</a>
 
     </div>
-
+<section class="gridt">
     <%dataArr.forEach(value =>{%>
+        <div class="gridi">
 <p> country name :<%=value.country%></p>
 <p> totalConfirmed : <%=value.totalConfirmed%></p>
 <p> totalDeaths : <%=value.totalDeaths%></p>
 <p> totalRecovered:  <%=value.totalRecovered%></p>
 <p> date : <%=value.date%></p>
+
 <form action="/myRecords" method="POST">
     <button type="submit"> add-to-my-records </button>
     <input type="text" name="country" value="<%=value.country%>" hidden>
@@ -32,7 +34,8 @@
     <input type="text" name="date" value="<%=value.date%>" hidden>
 
 </form>
-
+</div>
 <%})%>
+</section>
 </body>
 </html>
